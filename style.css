@@ -1,0 +1,120 @@
+@font-face {
+	font-family: 'Figtree';
+	src: url('./assets/fonts/static/Figtree-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+}
+@font-face {
+	font-family: 'Figtree';
+	src: url('./assets/fonts/static/Figtree-SemiBold.ttf') format('truetype');
+	font-weight: 500;
+}
+:root {
+	--white: hsl(0, 0%, 100%);
+	--yellow: hsl(47, 88%, 63%);
+	--grey-500: hsl(0, 0%, 42%);
+	--grey-950: hsl(0, 0%, 7%);
+}
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Figtree', sans-serif;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1.5rem;
+	min-height: 100vh;
+	background-color: var(--yellow);
+}
+.card {
+	display: block;
+	text-decoration: none;
+	max-width: 384px;
+	margin: 0 auto;
+}
+.card:hover article,
+.card:active article,
+.card:focus article {
+	box-shadow: 16px 16px 0 #000000;
+}
+.card article {
+	padding: 1.5rem;
+	border: 1px solid var(--grey-950);
+	border-radius: 20px;
+	background-color: var(--white);
+	box-sizing: border-box;
+	box-shadow: 8px 8px 0 #000000;
+	transition: box-shadow 0.6s;
+}
+.card article > figure {
+	margin-bottom: 1.5rem;
+}
+.card article > figure img {
+	display: block;
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+.card article > header h2 {
+	display: inline-block;
+	border-radius: 4px;
+	padding: 0.25rem 0.75rem;
+	margin-bottom: 0.75rem;
+	background-color: var(--yellow);
+	color: var(--grey-950);
+	font-size: clamp(0.75rem, 0.5951rem + 0.5831vw, 0.875rem);
+	font-weight: 800;
+	line-height: 1.5;
+}
+.card article > header h3 {
+	color: var(--grey-950);
+	font-size: clamp(0.75rem, 0.5951rem + 0.5831vw, 0.875rem);
+	font-weight: 500;
+	line-height: 1.5;
+	margin-bottom: 0.75rem;
+}
+.card article > h1 {
+	color: var(--grey-950);
+	font-size: clamp(1.25rem, 0.9402rem + 1.1662vw, 1.5rem);
+	font-weight: 800;
+	line-height: 1.5;
+	margin-bottom: 0.75rem;
+	transition: color 0.6s;
+}
+.card:hover article > h1,
+.card:active article > h1,
+.card:focus article > h1 {
+	color: var(--yellow);
+}
+.card article > p {
+	color: var(--grey-500);
+	font-size: clamp(0.875rem, 0.7201rem + 0.5831vw, 1rem);
+	font-weight: 500;
+	line-height: 1.5;
+	margin-bottom: 1.5rem;
+}
+.card article > footer figure {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+.card article > footer figure img {
+	height: 32px;
+	width: 32px;
+	border-radius: 50%;
+}
+.card article > footer figure figcaption {
+	color: var(--grey-950);
+	font-size: 0.875rem;
+	font-weight: 800;
+	line-height: 1.5;
+}
+.attribution {
+	font-size: 0.6875rem;
+	text-align: center;
+}
+.attribution a {
+	color: #3e52a3;
+}
